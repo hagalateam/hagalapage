@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Godnirium';
+    src: url('../fonts/Godnirium-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Godnirium', Arial, sans-serif;
+}
