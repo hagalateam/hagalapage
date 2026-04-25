@@ -1,10 +1,21 @@
 @font-face {
-    font-family: 'Godnirium';
-    src: url('../fonts/Godnirium-Regular.ttf') format('truetype');
+    font-family: "Godnirium";
+    src: url("/assets/fonts/Godnirium-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+p, a, h1, h2, h3, h4, h5, small {
+    font-family: "Godnirium", sans-serif;
+    color: #ffffff !important;
+}
+
+.btn:hover {
+    color: #231A33 !important;
 }
 
 body {
-    font-family: 'Godnirium', Arial, sans-serif;
+    font-family: "Godnirium", sans-serif;
     background-image: url("/assets/img/background.png");
 
     background-size: cover;
@@ -16,16 +27,12 @@ body {
     min-height: 100vh;
 }
 .hero-main {
-    min-height: 85vh;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 12px 42px 42px 12px;
     background-image: linear-gradient(
-        rgba(10, 10, 20, 0.75),
-        rgba(10, 10, 20, 0.9)
-    ),
-    url("../img/hero-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+        rgba(10, 10, 20, 0.25),
+        rgba(10, 10, 20, 0.25)
+    );
 
     padding: 60px 20px;
 }
@@ -159,4 +166,111 @@ body {
     object-fit: contain;
 
     display: block;
+}
+
+.title-gd {
+    font-family: "Godnirium", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 3rem;
+
+    text-shadow:
+        0 0 2px rgba(122, 44, 255, 1),
+        0 0 6px rgba(122, 44, 255, 0.9),
+        0 0 12px rgba(122, 44, 255, 0.7),
+        0 0 18px rgba(122, 44, 255, 0.5);
+
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.title-gd:hover {
+    transform: scale(1.08);
+}
+
+p.text-gd {
+    font-weight: normal;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 1.6;
+
+    -webkit-text-stroke: 0.5px #290568;
+
+    text-shadow:
+        0 0 2px rgba(122, 44, 255, 1),
+        0 0 6px rgba(122, 44, 255, 0.9),
+        0 0 12px rgba(122, 44, 255, 0.7),
+        0 0 18px rgba(122, 44, 255, 0.5);
+
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+
+    transition: color 0.2s ease, -webkit-text-stroke 0.2s ease;
+}
+
+/* Wrapper que permite scroll horizontal */
+.ab-wrapper {
+    width: 100%;
+}
+
+/* Contenedor gris horizontal fijo */
+.ab-container {
+    border-radius: 12px 42px 42px 12px;
+
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+    background-image: url("/assets/img/menu_2.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-image: linear-gradient(
+        #231A33,
+        #100d14
+    ); */
+    padding: 2rem;
+    margin: 2rem;
+
+    /* evita que se encoja */
+    width: max-content;
+}
+
+/* Elemento A: tamaño fijo */
+.game-card {
+    flex: 0 0 auto;
+    width: 260px;
+    height: 260px;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Elemento B: ancho fijo también */
+.info-box {
+    flex: 0 0 auto;
+    border-radius: 12px 42px 42px 12px;
+    width: 600px;
+    min-height: 260px;
+
+    /* background-image: linear-gradient(
+        #872A81,
+        #2b1129
+    ); */
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;       /* centrado vertical */
+    justify-content: flex-start;
+
+    text-align: left;
 }
