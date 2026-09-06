@@ -1,2 +1,0 @@
-# hagalapage
-pagina de hagala
