@@ -116,9 +116,8 @@
                         </svg>Estudio independiente de videojuegos</span>
                     <h1
                         class="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
-                        Mundos que<br /><span
-                            class="text-glow bg-gradient-to-r from-primary via-violet-300 to-primary bg-clip-text text-transparent">cobran
-                            vida</span></h1>
+                        <span class="palabra-cambiante" id="palabra">Mundos</span> que<br /><span
+                            class="text-glow bg-gradient-to-r from-primary via-violet-300 to-primary bg-clip-text text-transparent"><span class="palabra-cambiante" id="palabra2">cobran vida</span></span></h1>
                     <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">HAGALA TEAM<!-- --> es un
                         <!-- -->estudio independiente de videojuegos<!-- --> enfocado en experiencias cinemáticas y
                         atmosféricas. Este es el universo de<!-- --> <span class="text-foreground">GODNIRIUM</span>.</p>
@@ -412,5 +411,53 @@
     <script src="/_next/static/chunks/3s6nzrbk-8mnv.js" id="_R_" async=""></script>
     <script>(self.__next_f = self.__next_f || []).push([0])</script>
     <script>self.__next_f.push([1, ".542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z\"}]}]}]\n2b:[\"$\",\"a\",\"Facebook\",{\"href\":\"https://www.facebook.com/eldanfi\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"aria-label\":\"Facebook\",\"className\":\"flex h-20 w-20 flex-col items-center justify-center gap-1.5 rounded-2xl border border-border bg-background/40 text-muted-foreground backdrop-blur transition-colors hover:border-primary/50 hover:text-primary\",\"children\":[\"$\",\"svg\",null,{\"width\":20,\"height\":20,\"viewBox\":\"0 0 24 24\",\"fill\":\"currentColor\",\"aria-hidden\":true,\"className\":\"h-6 w-6\",\"children\":[\"$\",\"path\",null,{\"d\":\"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z\"}]}]}]\n1d:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"2\",{\"name\":\"theme-color\",\"content\":\"#120a1f\"}],[\"$\",\"meta\",\"3\",{\"name\":\"color-scheme\",\"content\":\"dark\"}]]\n20:[[\"$\",\"title\",\"0\",{\"children\":\"HAGALA TEAM — Estudio independiente de videojuegos\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"HAGALA TEAM es un estudio independiente de videojuegos que crea experiencias cinemáticas y atmosféricas. Descubre GODNIRIUM.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"generator\",\"content\":\"v0.app\"}],[\"$\",\"meta\",\"3\",{\"name\":\"keywords\",\"content\":\"HAGALA TEAM,GODNIRIUM,videojuegos,estudio indie,game studio\"}],[\"$\",\"meta\",\"4\",{\"property\":\"og:title\",\"content\":\"HAGALA TEAM — Estudio independiente de videojuegos\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:description\",\"content\":\"HAGALA TEAM es un estudio independiente de videojuegos que crea experiencias cinemáticas y atmosféricas. Descubre GODNIRIUM.\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:site_name\",\"content\":\"HAGALA TEAM\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:locale\",\"content\":\"es_ES\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:image\",\"content\":\"https://hagalateam.com/assets/hagala/og-cover.png\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:alt\",\"content\":\"HAGALA TEAM\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:title\",\"content\":\"HAGALA TEAM — Estudio independiente de videojuegos\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:description\",\"content\":\"HAGALA TEAM es un estudio independiente de videojuegos que crea experiencias cinemáticas y atmosféricas. Descubre GODNIRIUM.\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:image\",\"content\":\"https://hagalateam.com/assets/hagala/og-cover.png\"}]]\n2d:null\n"])</script>
+	<style> .palabra-cambiante { display: inline-block; transition: filter 0.35s ease, opacity 0.35s ease; } .palabra-cambiante.blur { filter: blur(8px); opacity: 0.4; } </style>
+	<script>
+		const palabra = document.getElementById("palabra");
+
+		const palabras = [
+			"Mundos",
+			"Sueños",
+		];
+
+		let indice = 0;
+
+		setInterval(() => {
+			palabra.classList.add("blur");
+
+			setTimeout(() => {
+			indice = (indice + 1) % palabras.length;
+			palabra.textContent = palabras[indice];
+			}, 350);
+
+			setTimeout(() => {
+			palabra.classList.remove("blur");
+			}, 700);
+
+		}, 3000);
+        
+		const palabra2 = document.getElementById("palabra2");
+
+		const palabras2 = [
+			"cobran vida",
+			"te atrapan",
+		];
+
+		let indice2 = 0;
+
+		setInterval(() => {
+			palabra2.classList.add("blur");
+
+			setTimeout(() => {
+			indice2 = (indice2 + 1) % palabras2.length;
+			palabra2.textContent = palabras2[indice2];
+			}, 350);
+
+			setTimeout(() => {
+			palabra2.classList.remove("blur");
+			}, 700);
+
+		}, 6700);
+    </script>
 </body>
 </html>
